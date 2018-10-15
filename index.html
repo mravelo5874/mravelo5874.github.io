@@ -1,70 +1,51 @@
-<!DOCTYPE html>
-<!-- http-server -a localhost -p 8000 -c-1 -->
-<html>
-<head>
-	<title> Mineral, Parchment, Shears! </title>
-	<script src="js/game.js"></script>
-	<script src="js/material.js"></script>
-	<script src="js/math.js"></script>
-	<script src="js/entity.js"></script>
-	<script src="js/enemy.js"></script>
-	<script src="js/damage.js"></script>
-	<style>
-		* {margin:0 ; padding:0;}
-		body {overflow:hidden}
-		canvas{background:black;}
-	</style>
-	
-	<script>
-		var audio = new Audio("music/Theme.mp3");
-		audio.play();
+<!DOCTYPE html>	
+<html>	
+ <head>	
+	<link rel="shortcut icon" type="image/icon" href="images/favicon.ico">	
+	<title>Marco's Website</title>	
+	<link rel="stylesheet" type="text/css" href="/css/main.css">	
+</head>	
+ <body>	
+ <h1>Marco A. Ravelo's Website</h1>	
+	<h3> This is a personal website where I can share my projects, ideas, etc. </h3>	
+		<a href="images/College_Resume (7).pdf" target="_blank">[Resume]</a>	
+	        <a href="https://www.linkedin.com/in/tamuMarcoARavelo" target="_blank">[LinkedIn]</a>	
+<p>    Email: mravelo5874@gmail.com	
+<br>   Bio: I am currently an undergraduate student at Texas A&M studying Computer Science. 	
+	I enjoy programming and creating games. Some of my interests within the CS field include 	
+	application development, computer graphics, computer-human interaction, and artificial intelligence. </p>	
+<hr>	
 		
-		window.addEventListener("load", function()
-		{
-			window.game = new Game();
-			
-			window.game.resize(window.innerWidth, window.innerHeight);
-			
-			loop();
-		});
+<h2>Personal Projects:</h2>	
+<p>Here's how to download and play a game:</p>	
+<ol>	
+	<li> Download the .zip file</li>	
+	<li> Right click and extract it onto your computer</li>	
+	<li> Run the application (Read the "Read me!.txt" for more information)</li>	
+</ol>	
+ <h3>&#9632; Tetris *work in progress*:</h3>	
+ <img src="images/tetris_screenshot.PNG" alt="tetris_screenshot.png" width="250" height="325"/>	
+ <h3>	
+	<a href="zipfiles/c++tetris.zip">Download .zip file [1.40MB]</a>	
+</h3>	
 		
-		window.addEventListener("resize", function()
-		{
-			window.game.resize(window.innerWidth, window.innerHeight);
-		});
+<h3>&#9632; Floodit!:</h3>	
+ <img src="images/floodit_screenshot.PNG" alt="floodit_screenshot.png" width="250" height="250"/>	
+ <h3>		
+	<a href="zipfiles/c++floodit.zip">Download .zip file [1.42MB]</a>	
+</h3>	
 		
-		window.addEventListener('keydown', function(event) { Key.onKeydown(event); }, false);
-		window.addEventListener('keyup', function(event) { Key.onKeyup(event); }, false);
-
-	</script>
-	
-	<script type="vertext_shader" id="vs_01">
-		attribute vec2 a_position;
-		attribute vec2 a_texCoord;
+<h3>&#9632; Hangman:</h3>	
+ <img src="images/hangman_screenshot.PNG" alt="hangman_screenshot.png" width="350" height="250"/>	
+ <h3>	
+	<a href="zipfiles/c++hangmangame.zip">Download .zip file [1.47MB]</a>	
+</h3>	
 		
-		uniform mat3 u_world;
-		uniform mat3 u_object;
-		uniform vec2 u_frame;
+<hr>	
 		
-		varying vec2 v_texCoord;
-		void main()
-		{
-			gl_Position = vec4( u_world * u_object * vec3(a_position, 1), 1); // order matters!
-			v_texCoord = a_texCoord + u_frame;
-		}
-	</script>
-	
-	<script type="fragment_shader" id="fs_01">
-		precision mediump float;
-		uniform sampler2D u_image;
-		varying vec2 v_texCoord;
+<h5>I used <a href="http://lazyfoo.net/tutorials/SDL/">Lazy Foo' Productions</a> tutorial on game programming with SDL 2.0 to make the games.</h5>	
+ <h5>This website is hosted with GitHub Pages.</h5>	
+ <h5>Website created: June 2018</h5>	
 		
-		void main()
-		{
-			gl_FragColor = texture2D(u_image, v_texCoord);
-		}
-	</script>
-</head>
-<body>
-</body>
-</html>
+</body>	
+ </html>
