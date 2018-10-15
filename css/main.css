@@ -3,7 +3,7 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Courier-New';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -21,19 +21,19 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Courier-New';
 }
 h2 {
     font-size: 2em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Courier-New';
 }
 h3 {
     font-size: 1em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Courier-New';
 }
 h4 {
     font-size: 0.5em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Courier-New';
 }
 p {
     font-size: 1em;
@@ -52,4 +52,19 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.item{
+  width:200px;
+  text-align:center;
+  display:block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-right: 10px;
+  margin-bottom: 1px;
+  float:left;
+}
+
+#index-gallery{
+  width:465px;
 }
