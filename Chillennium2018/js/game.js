@@ -93,7 +93,7 @@ class Game
 		this.coords = new Point(105, 83);
 		this.frame = new Point();
 		
-		this.player_health_bar = new Sprite(this.gl, "img/playerHealth.png", this.vs, this.fs, {width: 22, height: 3});
+		this.player_health_bar = new Sprite(this.gl, "img/PlayerHealth.png", this.vs, this.fs, {width: 22, height: 3});
 		this.bar_pos = new Point(95, 100);
 		this.bar_frame = new Point();
 		
@@ -288,7 +288,6 @@ class Game
 	
 	update()
 	{
-		console.log(this.bar_frame.y);
 	if (this.bar_frame.y >= -20)
 	{
 		var right = this.right;
