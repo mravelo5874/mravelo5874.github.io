@@ -70,12 +70,12 @@ ol
 
 button
 {
-	background-color: gray;
-	color: gray;
+	background-color: blue;
+	color: orange;
 }
 
 button:hover
 {
-	background-color: #808080;
-	color: #808080;
+	background-color: green;
+	color: red;
 }
