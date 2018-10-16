@@ -69,9 +69,11 @@ ol
 button
 {
 	background-color: gray;
+	color: gray;
 }
 
 button:hover
 {
 	background-color: #808080;
+	color: #808080;
 }
