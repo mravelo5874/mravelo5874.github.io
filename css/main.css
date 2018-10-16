@@ -3,7 +3,7 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
-    font-family:'Courier-New';
+    font-family:'Courier';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -21,19 +21,19 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Courier-New';
+    font-family:'Courier';
 }
 h2 {
     font-size: 2em;
-    font-family:'Courier-New';
+    font-family:'Courier';
 }
 h3 {
     font-size: 1em;
-    font-family:'Courier-New';
+    font-family:'Courier';
 }
 h4 {
     font-size: 0.5em;
-    font-family:'Courier-New';
+    font-family:'Courier';
 }
 p {
     font-size: 1em;
