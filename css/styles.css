@@ -59,3 +59,15 @@ ol
     line-height: 1.4em;
     color: lightgray;
 }
+
+button
+{
+	background-color: darkgray;
+	color: lightgray;
+}
+
+button:hover
+{
+	background-color: lightgray;
+	color: darkgray;
+}
