@@ -23,14 +23,14 @@ h1
 {
 	font-size: 3em;
 	font-family:'Courier';
-	color: lightgray;
+	color: white;
 }
 
 h2 
 {
 	font-size: 2em;
 	font-family:'Courier';
-	color: lightgray;
+	color: darkgray;
 }
 
 h3 
@@ -78,8 +78,8 @@ button:hover
 	background-color: #A2A2A2;
 }
 
-.ImageBorder
-{
-    border-width: 2px;
-    border-color: darkgray;
+img {
+   padding:1px;
+   border:1px solid #021a40;
+   background-color:#ff0;
 }
