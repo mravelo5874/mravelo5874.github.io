@@ -68,10 +68,10 @@ ol
 
 button
 {
-	background-color: darkgray;
+	background-color: gray;
 }
 
 button:hover
 {
-	background-color: gray;
+	background-color: darkgray;
 }
