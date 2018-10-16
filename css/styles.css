@@ -1,14 +1,14 @@
 a 
 {
 	text-decoration: none;
-	color: darkgray;
+	color: #404040;
 	font-size: 1.5em;
 	font-family:'Courier'
 }
 
 a:hover 
 {
-	color: gray;
+	color: #808080;
 }
 
 
@@ -68,10 +68,10 @@ ol
 
 button
 {
-	background-color: darkgray;
+	background-color: grey;
 }
 
 button:hover
 {
-	background-color: lightgray;
+	background-color: darkgray;
 }
