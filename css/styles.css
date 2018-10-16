@@ -1,17 +1,16 @@
 a 
 {
 	text-decoration: none;
-	color: gray;
+	color: darkgray;
 	font-size: 1.5em;
 	font-family:'Courier'
 }
 
 a:hover 
 {
-	text-decoration: underline;
-	color: lightblue;
-	text-decoration-color: lightblue;
+	color: gray;
 }
+
 
 body 
 {
@@ -70,11 +69,9 @@ ol
 button
 {
 	background-color: darkgray;
-	color: darkgray;
 }
 
 button:hover
 {
 	background-color: lightgray;
-	color: darkgray;
 }
