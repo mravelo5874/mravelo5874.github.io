@@ -1,14 +1,14 @@
 a 
 {
 	text-decoration: none;
-	color: #808080;
+	color: darkgray;
 	font-size: 1.5em;
 	font-family:'Courier'
 }
 
 a:hover 
 {
-	color: darkgray;
+	color: #808080;
 }
 
 
@@ -73,5 +73,5 @@ button
 
 button:hover
 {
-	background-color: darkgray;
+	background-color: #808080;
 }
