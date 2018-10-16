@@ -8,15 +8,15 @@ a
 
 a:hover 
 {
-	color: darkgray;
+	color: #6DC5D8;
 }
 
 
 body 
 {
 	background-image: url("background_pattern.png");
-	margin: 5em;
-	padding: 5em;
+	margin: 2.5em;
+	padding: 2.55em;
 }
 
 h1 
@@ -76,4 +76,10 @@ button
 button:hover
 {
 	background-color: #A2A2A2;
+}
+
+.ImageBorder
+{
+    border-width: 2px;
+    border-color: darkgray;
 }
