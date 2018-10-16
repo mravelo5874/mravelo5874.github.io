@@ -1,0 +1,41 @@
+body 
+{
+    margin: 60px auto;
+    width: 70%;
+}
+
+a 
+{
+    text-decoration: none;
+    color: blue;
+    font-size: 1.5em;
+    font-family:'Courier'
+}
+
+a:hover 
+{
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Courier';
+}
+h2 {
+    font-size: 2em;
+    font-family:'Courier';
+}
+h3 {
+    font-size: 1em;
+    font-family:'Courier';
+}
+h4 {
+    font-size: 0.5em;
+    font-family:'Courier';
+}
+p {
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #333;
+}
+
