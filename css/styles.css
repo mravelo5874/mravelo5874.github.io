@@ -1,7 +1,7 @@
 a 
 {
 	text-decoration: none;
-	color: black;
+	color: gray;
 	font-size: 1.5em;
 	font-family:'Courier'
 }
@@ -9,43 +9,47 @@ a
 a:hover 
 {
 	text-decoration: underline;
-	text-decoration-color: blue;
+	text-decoration-color: lightblue;
 }
 
 body 
 {
-	background-color: white;
+	background-image: url("background_pattern.png");
 }
 
 h1 
 {
 	font-size: 3em;
 	font-family:'Courier';
+	color: lightgray;
 }
 
 h2 
 {
-	font-size: 1.5em;
+	font-size: 2em;
 	font-family:'Courier';
+	color: lightgray;
 }
 
 h3 
 {
-		font-size: 1em;
+	font-size: 1em;
 	font-family:'Courier';
+	color: lightgray;
 }
 h4 
 {
     font-size: 0.5em;
     font-family:'Courier';
+    color: lightgray;
 }
 
 p 
 {
     font-size: 1em;
-     font-family:'Courier';
+    font-family:'Courier';
     line-height: 1.4em;
-    color: #333;
+    color: lightgray;
 }
 
 ol
@@ -53,5 +57,5 @@ ol
  font-size: 1em;
      font-family:'Courier';
     line-height: 1.4em;
-    color: #333;
+    color: lightgray;
 }
