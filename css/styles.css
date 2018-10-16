@@ -9,6 +9,7 @@ a
 a:hover 
 {
 	text-decoration: underline;
+	color: lightblue;
 	text-decoration-color: lightblue;
 }
 
@@ -28,7 +29,7 @@ h2
 {
 	font-size: 2em;
 	font-family:'Courier';
-	color: lightgray;
+	color: darkgray;
 }
 
 h3 
@@ -38,6 +39,12 @@ h3
 	color: lightgray;
 }
 h4 
+{
+    font-size: 0.5em;
+    font-family:'Courier';
+    color: lightgray;
+}
+h5 
 {
     font-size: 0.5em;
     font-family:'Courier';
@@ -63,7 +70,7 @@ ol
 button
 {
 	background-color: darkgray;
-	color: lightgray;
+	color: darkgray;
 }
 
 button:hover
