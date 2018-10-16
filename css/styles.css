@@ -1,22 +1,22 @@
 a 
 {
 	text-decoration: none;
-	color: darkgray;
+	color: #808080;
 	font-size: 1.5em;
 	font-family:'Courier'
 }
 
 a:hover 
 {
-	color: #808080;
+	color: darkgray;
 }
 
 
 body 
 {
 	background-image: url("background_pattern.png");
-	margin:10;
-	padding:10;
+	margin: 5em;
+	padding: 5em;
 }
 
 h1 
@@ -70,12 +70,10 @@ ol
 
 button
 {
-	background-color: blue;
-	color: orange;
+	background-color: #DEDEDE;
 }
 
 button:hover
 {
-	background-color: green;
-	color: red;
+	background-color: #A2A2A2;
 }
