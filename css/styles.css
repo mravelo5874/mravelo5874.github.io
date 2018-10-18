@@ -15,8 +15,7 @@ a:hover
 body 
 {
 	background-image: url("background_pattern.png");
-	margin: 2.5em;
-	padding: 2.55em;
+	padding: 20px 40px 10px;
 }
 
 h1 
@@ -64,7 +63,7 @@ p.gray
 	font-size: 1em;
     font-family:'Courier';
     line-height: 1.4em;
-    color: gray;
+    color: white;
 }
 
 ol
@@ -96,9 +95,4 @@ img
    padding:3px;
    border:2px solid #666666;
    background-color:#333333;
-}
-
-div.boxed
-{
-	border: 1px;
 }
