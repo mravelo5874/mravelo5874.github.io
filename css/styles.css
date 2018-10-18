@@ -15,7 +15,7 @@ a:hover
 body 
 {
 	background-image: url("background_pattern.png");
-	padding: 2em 15em 2em;
+	padding: 2em 12em 3em;
 }
 
 h1 
@@ -95,4 +95,9 @@ img
    padding:3px;
    border:2px solid #666666;
    background-color:#333333;
+}
+
+span.nowrap
+{
+	white-space: nowrap;
 }
