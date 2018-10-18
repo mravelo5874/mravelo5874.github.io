@@ -84,14 +84,8 @@ a.butt
 	padding: 12px 24px;
 }
 
-.divider
+img 
 {
-    width:5px;
-    height:auto;
-    display:inline-block;
-}
-
-img {
    padding:3px;
    border:2px solid #666666;
    background-color:#333333;
