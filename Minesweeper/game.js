@@ -1,7 +1,4 @@
-var cols, rows, tile_px, grid, totalBees, reset_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 20;
-
-
-oncontextmenu="event.preventDefault();"
+var cols, rows, tile_px, grid, totalBees, reset_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
 
 function reset()
 {
@@ -10,12 +7,11 @@ function reset()
 	hasStarted = false;
 	cols = size_slider.value();
 	rows = size_slider.value();
-	tile_px = 26;
+	tile_px = 40;
 	totalBees = Math.floor(cols*rows*0.125);
 
 	// create a canvas the size of the game board
-	createCanvas(cols * tile_px + 50, rows * tile_px + 50);
-
+	createCanvas(windowWidth, windowHeight);
 
 	// create 2D array
 	grid = create2Darray(cols, rows);
@@ -71,14 +67,13 @@ function setup()
 	textAlign(CENTER, CENTER);
 
 	size_slider = createSlider(8, 16, 8);
+	size_slider.position(185, 30);
 
 	reset();
 
 	reset_button = createButton('Reset');
-	reset_button.position(10, 10);
+	reset_button.position(120, 30);
 	reset_button.mousePressed(reset);
-
-	size_slider.position(65, 10);
 }	
 
 function create2Darray(c, r)
@@ -210,34 +205,35 @@ function draw()
 		}
 	}
 
+	strokeWeight(1);
 	textAlign(CENTER);
 	fill(0);
-	text(size_slider.value(), 200, 10);
+	text(size_slider.value(), 330, 28);
 
 	if (isWin)
 	{
 		textAlign(CENTER);
 		fill(0);
-		text('GAME!', rows*tile_px - 20, cols*tile_px + 40);
+		text('GAME!', rows*tile_px + 60, cols*tile_px + 70);
 		textAlign(LEFT);
 		fill(0);
-		text(endTime, 3, cols*tile_px + 40);
+		text(endTime, 100, cols*tile_px + 70);
 	}
 	else if(isLose)
 	{
 		textAlign(CENTER);
 		fill(0);
-		text('LOSE!', rows*tile_px - 20, cols*tile_px + 40);
+		text('LOSE!', rows*tile_px + 60, cols*tile_px + 70);
 		textAlign(LEFT);
 		fill(0);
-		text(endTime, 3, cols*tile_px + 40);
+		text(endTime, 100, cols*tile_px + 70);
 	}
 	else if(hasStarted)
 	{
 		var curr_time = new Date();
 		var elapsed_time = curr_time.getTime() - timer.getTime();
 		textAlign(LEFT);
-		fill(255);
-		text(elapsed_time / 1000, 3, cols*tile_px + 40);
+		fill(0);
+		text(elapsed_time / 1000, 100, cols*tile_px + 70);
 	}
 }

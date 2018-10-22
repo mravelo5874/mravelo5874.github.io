@@ -2,8 +2,8 @@ function Cell(i, j, w)
 {
 	this.i = i;
 	this.j = j;
-	this.x = i*w;
-	this.y = j*w + 30;
+	this.x = i*w + 100;
+	this.y = j*w + 50;
 	this.w = w;
 	this.bee = false;
 	this.open = false;
@@ -14,6 +14,7 @@ function Cell(i, j, w)
 Cell.prototype.show = function()
 {
 	stroke(0);
+	strokeWeight(2);
 	noFill();
 	rect(this.x, this.y, this.w, this.w);
 
@@ -21,8 +22,10 @@ Cell.prototype.show = function()
 	{
 		if(this.bee)
 		{
+			fill(255, 100, 100);
+			rect(this.x, this.y, this.w, this.w);
 			fill(0);
-			ellipse(this.x + this.w*0.5, this.y + this.w*0.5, this.w * 0.5)
+			ellipse(this.x + this.w*0.5, this.y + this.w*0.5, this.w * 0.4)
 		}
 		else
 		{
@@ -39,7 +42,7 @@ Cell.prototype.show = function()
 	{
 		if (this.flag)
 		{
-			fill(255, 0, 0);
+			fill(0, 255, 100);
 			rect(this.x + this.w*0.25, this.y +this.w*0.25, this.w*0.5, this.w*0.5);
 		}
 	}
