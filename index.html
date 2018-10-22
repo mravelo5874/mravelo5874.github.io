@@ -4,63 +4,76 @@
  	<link rel="stylesheet" href="css/styles.css">
 	<link rel="shortcut icon" type="image/icon" href="images/favicon.ico">	
 	<title>Marco's Website</title>	
-</head>	
- <body>	
- <h1>Marco A. <br />Ravelo's <br />Website</h1>	
-	<h2 style="font-size:1.3em"> This is a personal website where I can share my projects, ideas, etc. </h2>
-		<button>
-		<a class="butt" href="images/College_Resume (7).pdf" target="_blank">Resume</a>
-		</button>
-		<button>
-	    <a class="butt" href="https://www.linkedin.com/in/tamuMarcoARavelo" target="_blank">LinkedIn</a>
-	    </button>	
 
-<p>    <i>Email:</i> mravelo5874@gmail.com	
-<br>   <i>Bio:</i> I am currently an undergraduate student at Texas A&M studying Computer Science. 	
-	I enjoy programming and creating games. Some of my interests within the CS field include 	
-	application/game development, computer graphics, computer-human interaction, and artificial intelligence. </p>	
+	<script src="Minesweeper/p5.min.js"></script>
+	<script src="Minesweeper/p5.dom.js"></script>
+	<script src="Minesweeper/game.js"></script>
+	<script src="Minesweeper/cell.js"></script>
+</head>	
+ <body oncontextmenu="event.preventDefault();">	
+
+<!-- side bar -->
+<div class="sidebar">
+	<h1>Marco A. <br />Ravelo's <br />Website</h1>
+
+	<a href="images/College_Resume (7).pdf" target="_blank">Resume</a>
+	<a href="https://www.linkedin.com/in/tamuMarcoARavelo" target="_blank">LinkedIn</a>
+	<a href="https://github.com/mravelo5874" target="_blank">GitHub</a>
+</div>
+
+<!-- main page content-->
+<div class="main">	
+	<h2 style="font-size:1.3em;"> This is a personal website where I can share my projects, ideas, etc. </h2>	
+
+<p>    
+	<i>Email:</i> mravelo5874@gmail.com	
+	<br>
+	<i>Bio:</i> I am currently an undergraduate student at Texas A&M studying Computer Science with a minor in Mathematics and Art.	I enjoy programming and creating games. Some of my interests within the CS field include application/game development, computer graphics, computer-human interaction, and artificial intelligence. </p>	
 <hr>	
 
 <h2>Chillennium 2018:</h2>
-<figure>
+<div class="box">
 	 <img src="images/MPSshot1.PNG" alt="MPS_titlescreenshot.png" width="406" height="312" align="right" hspace="20" />
 
 		<p>
 	 	 Chillennium is the largest student-run game jam in the world. Participants (in teams of 1-4) have 48 hours to plan, design, and develop a video game from scratch based on around a theme. For more information, visit the official <a style="font-size:1em;" href="http://www.chillennium.com/index.html" target="_blank"> <i>Chillennium Website</i></a>.
 	 	</p>
-	<br />
 		<p>
 	 	 I attended Chillennium 2018 in a team with three other friends where we developed a game based on the "Transformation" theme. The game we made, "Mineral, Parchment, Shears!" is a 2D side-scrolling runner where the player must 'transform' between rock, paper, and scissors to defeat oncoming enemies.
 	 	</p>
-	<br />
 		<p>
 		 We programmed the game using Javascript and WebGL. The reason being that he game would be playable in browser and be more accesible. I mainly worked on the artistic design and coding portions of the game. Below is a button to play the game in a new tab.
 		</p>
-	<br />
+</div>	
+
+<br />
 		<center>
 	 		<button> 
 	 			<a class="butt" href="Chillennium2018/index.html" target="_blank">Play Game</a> 
 	 		</button>
 	 	</center>
 	<br />
-</figure>		
+
 <hr>
 
 
 <h2>Personal Projects:</h2>	
 
-<figure>
+<div class="box">
 	<h3>&#9632; October 2018: Minesweeper with Javascript and p5.js</h3>
-	<center>
-	 	<button> 
-	 		<a class="butt" href="Minesweeper/index.html" target="_blank">Play Game</a> 
-	 	</button>
-	 </center>
-</figure>
 
-<figure>
+	<div class='gameBox' id='gameBox' style="position: relative"></div>
+	
+	<h5>I used the <a style="font-size:1em;" href="https://p5js.org/">p5.js</a> Javascript library.</h5>
+	
+</div>
+
+<br />
+
+<div class="box">
 		<h3>&#9632; Summer 2018: C++ with SDL 2.0</h3>	
- 		<img src="images/floodit_screenshot.PNG" alt="floodit_screenshot.png"width="250" height="250" hspace="20" align="left"/>	
+ 		<img src="images/floodit_screenshot.PNG" alt="floodit_screenshot.png"width="250" height="250" hspace="20" align="left"/>
+
  		<p>
  			After my first two semesters in college, I wanted to continue to work on programing projects. I decided to expand upon what I was taught in my introductory programing class (in C++); using an external library (called SDL 2.0), I was able to import and render textures and sprites to a window screen. With this, I was able to program three simple games thoughtout the summer: Hangman, Floodit!, and Tetris.
  		</p>	
@@ -68,19 +81,25 @@
  			I programmed the games in C++ because that was the only language I was familar with at the time. The disadvantage of this is is that one has to download and run the application on their own device as compared to playing the game in browser.
  		</p>
 
-		<center>
- 			<button>		
- 				<a  class="butt" href="C++Games.zip">Download .zip file [4.28MB]</a>
-			</button>
-		</center>
+ 		<h5>I used <a style="font-size:1em;" href="http://lazyfoo.net/tutorials/SDL/">Lazy Foo' Productions</a> tutorial on game programming with SDL 2.0.</h5>
+</div>
 
-		<h5>I used <a style="font-size:1em;" href="http://lazyfoo.net/tutorials/SDL/">Lazy Foo' Productions</a> tutorial on game programming with SDL 2.0.</h5>
-</figure>
+<br />
+
+<center>
+ 	<button>		
+ 		<a  class="butt" href="C++Games.zip">Download .zip file [4.28MB]</a>
+	</button>
+</center>
+
+<br />
 
 <hr>	
 		
  <h5>This website is hosted with GitHub Pages.</h5>	
- <h5>Website created: June 2018</h5>	
+ <h5>Website created: June 2018</h5>
+
+ </div>	
 		
 </body>	
  </html>

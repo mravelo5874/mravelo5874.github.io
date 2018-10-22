@@ -2,7 +2,7 @@ function Cell(i, j, w)
 {
 	this.i = i;
 	this.j = j;
-	this.x = i*w + 100;
+	this.x = i*w + 10;
 	this.y = j*w + 50;
 	this.w = w;
 	this.bee = false;

@@ -1,4 +1,4 @@
-var cols, rows, tile_px, grid, totalBees, reset_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
+var mycanvas, cols, rows, tile_px, grid, totalBees, reset_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
 
 function reset()
 {
@@ -11,7 +11,8 @@ function reset()
 	totalBees = Math.floor(cols*rows*0.125);
 
 	// create a canvas the size of the game board
-	createCanvas(windowWidth, windowHeight);
+	mycanvas = createCanvas(cols*tile_px+20, rows*tile_px+100);
+	mycanvas.parent('gameBox');
 
 	// create 2D array
 	grid = create2Darray(cols, rows);
@@ -57,7 +58,7 @@ function reset()
 
 function preload()
 {
-	font = loadFont('heavy_data.ttf');
+	font = loadFont('Minesweeper/heavy_data.ttf');
 }
 
 function setup()
@@ -67,12 +68,14 @@ function setup()
 	textAlign(CENTER, CENTER);
 
 	size_slider = createSlider(8, 16, 8);
-	size_slider.position(210, 30);
+	size_slider.parent('gameBox');
+	size_slider.position(120, 19);
 
 	reset();
 
 	reset_button = createButton('Reset');
-	reset_button.position(120, 30);
+	reset_button.parent('gameBox');
+	reset_button.position(15, 20);
 	reset_button.mousePressed(reset);
 }	
 
@@ -208,25 +211,25 @@ function draw()
 	strokeWeight(1);
 	textAlign(CENTER);
 	fill(0);
-	text(size_slider.value(), 190, 28);
+	text(size_slider.value(), 90, 23);
 
 	if (isWin)
 	{
 		textAlign(CENTER);
 		fill(0);
-		text('GAME!', rows*tile_px + 60, cols*tile_px + 70);
+		text('GAME!', rows*tile_px - 25, cols*tile_px + 70);
 		textAlign(LEFT);
 		fill(0);
-		text(endTime, 100, cols*tile_px + 70);
+		text(endTime, 10, cols*tile_px + 70);
 	}
 	else if(isLose)
 	{
 		textAlign(CENTER);
 		fill(0);
-		text('LOSE!', rows*tile_px + 60, cols*tile_px + 70);
+		text('LOSE!', rows*tile_px - 25, cols*tile_px + 70);
 		textAlign(LEFT);
 		fill(0);
-		text(endTime, 100, cols*tile_px + 70);
+		text(endTime, 10, cols*tile_px + 70);
 	}
 	else if(hasStarted)
 	{
@@ -234,6 +237,6 @@ function draw()
 		var elapsed_time = curr_time.getTime() - timer.getTime();
 		textAlign(LEFT);
 		fill(0);
-		text(elapsed_time / 1000, 100, cols*tile_px + 70);
+		text(elapsed_time / 1000, 10, cols*tile_px + 70);
 	}
 }
