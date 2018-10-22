@@ -1,12 +1,14 @@
-var mycanvas, cols, rows, tile_px, grid, totalBees, reset_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
+var mycanvas, menu_open, cols, rows, tile_px, grid, totalBees, new_button, easy_button, med_button, hard_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
 
 function reset()
 {
+	menu_open = false;
+	easy_button.hide();
+	med_button.hide();
+	hard_button.hide();
 	isWin = false;
 	isLose = false;
 	hasStarted = false;
-	cols = size_slider.value();
-	rows = size_slider.value();
 	tile_px = 40;
 	totalBees = Math.floor(cols*rows*0.125);
 
@@ -61,22 +63,79 @@ function preload()
 	font = loadFont('Minesweeper/heavy_data.ttf');
 }
 
+function newGame()
+{
+	if (!menu_open)
+	{
+		easy_button.show();
+		med_button.show();
+		hard_button.show();
+		menu_open = true;
+	}
+	else if (menu_open)
+	{
+		easy_button.hide();
+		med_button.hide();
+		hard_button.hide();
+		menu_open = false;
+	}
+}
+
+function easyGame()
+{
+	rows = 8;
+	cols = 8;
+
+	reset();
+}
+
+function medGame()
+{
+	rows = 12;
+	cols = 12;
+
+	reset();
+}
+
+function hardGame()
+{
+	rows = 16;
+	cols = 16;
+
+	reset();
+}
+
 function setup()
 {
 	textFont(font);
 	textSize(fontSize);
 	textAlign(CENTER, CENTER);
+	menu_open = false;
 
-	size_slider = createSlider(8, 16, 8);
-	size_slider.parent('gameBox');
-	size_slider.position(120, 19);
+	new_button = createButton('New Game');
+	new_button.parent('gameBox');
+	new_button.position(15, 20);
+	new_button.mousePressed(newGame);
 
-	reset();
+	easy_button = createButton('Easy');
+	easy_button.parent('gameBox');
+	easy_button.position(110, 20);
+	easy_button.mousePressed(easyGame);
+	easy_button.hide();
 
-	reset_button = createButton('Reset');
-	reset_button.parent('gameBox');
-	reset_button.position(15, 20);
-	reset_button.mousePressed(reset);
+	med_button = createButton('Medium');
+	med_button.parent('gameBox');
+	med_button.position(165, 20);
+	med_button.mousePressed(medGame);
+	med_button.hide();
+
+	hard_button = createButton('Hard');
+	hard_button.parent('gameBox');
+	hard_button.position(238, 20);
+	hard_button.mousePressed(hardGame);
+	hard_button.hide();
+
+	easyGame();
 }	
 
 function create2Darray(c, r)
@@ -150,7 +209,7 @@ function checkForWin()
 function mousePressed()
 {
 
-	if (!isWin && !isLose)
+	if (!isWin && !isLose && !menu_open)
 	{
 		for (var i = 0; i < cols; i++)
 		{
@@ -207,11 +266,6 @@ function draw()
 			grid[i][j].show();
 		}
 	}
-
-	strokeWeight(1);
-	textAlign(CENTER);
-	fill(0);
-	text(size_slider.value(), 90, 23);
 
 	if (isWin)
 	{
