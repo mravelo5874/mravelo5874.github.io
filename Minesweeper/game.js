@@ -67,7 +67,7 @@ function setup()
 	textAlign(CENTER, CENTER);
 
 	size_slider = createSlider(8, 16, 8);
-	size_slider.position(185, 30);
+	size_slider.position(210, 30);
 
 	reset();
 
@@ -208,7 +208,7 @@ function draw()
 	strokeWeight(1);
 	textAlign(CENTER);
 	fill(0);
-	text(size_slider.value(), 330, 28);
+	text(size_slider.value(), 190, 28);
 
 	if (isWin)
 	{
