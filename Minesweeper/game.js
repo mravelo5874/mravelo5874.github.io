@@ -1,7 +1,24 @@
-var mycanvas, menu_open, cols, rows, tile_px, grid, totalBees, new_button, easy_button, med_button, hard_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
+var mycanvas, input, input_button, menu_open, cols, rows, tile_px, grid, totalBees, new_button, easy_button, med_button, hard_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
+var easy_name_1, easy_name_2, easy_name_3, med_name_1, med_name_2, med_name_3, hard_name_1, hard_name_2, hard_name_3;
+var easy_time_1, easy_time_2, easy_time_3, med_time_1, med_time_2, med_time_3, hard_time_1, hard_time_2, hard_time_3;
 
 function reset()
 {
+	loadTimes();
+	
+	// console.log("reset:");
+	// console.log(easy_name_1);
+	// console.log(easy_name_2);
+	// console.log(easy_name_3);
+
+	// console.log(med_name_1);
+	// console.log(med_name_2);
+	// console.log(med_name_3);
+
+	// console.log(hard_name_1);
+	// console.log(hard_name_2);
+	// console.log(hard_name_3);
+
 	menu_open = false;
 	easy_button.hide();
 	med_button.hide();
@@ -58,8 +75,219 @@ function reset()
 	}
 }
 
+function loadTimes()
+{
+	//localStorage.clear();
+
+
+	// easy times:
+	
+	if (localStorage.getItem("easy1"))
+	{
+		easy_name_1 = JSON.parse(localStorage.getItem("easy1"));
+		easy_time_1 = parseFloat(easy_name_1.split(" ", 1));
+	}
+	else 
+	{
+		easy_time_1 = 0;
+		easy_name_1 = '0 ---'
+	}
+	
+	if (localStorage.getItem("easy2"))
+	{
+		easy_name_2 = JSON.parse(localStorage.getItem("easy2"));
+		easy_time_2 = parseFloat(easy_name_2.split(" ", 1));
+	}
+	else 
+	{
+		easy_time_2 = 0;
+		easy_name_2 = '0 ---'
+	}
+
+	if (localStorage.getItem("easy3"))
+	{
+		easy_name_3 = JSON.parse(localStorage.getItem("easy3"));
+		easy_time_3 = parseFloat(easy_name_3.split(" ", 1));
+	}
+	else 
+	{
+		easy_time_3 = 0;
+		easy_name_3 = '0 ---'
+	}
+
+
+	// med times:
+
+	if (localStorage.getItem("med1"))
+	{
+		med_name_1 = JSON.parse(localStorage.getItem("med1"));
+		med_time_1 = parseFloat(med_name_1.split(" ", 1));
+	}
+	else 
+	{
+		med_time_1 = 0;
+		med_name_1 = '0 ---'
+	}
+	
+	if (localStorage.getItem("med2"))
+	{
+		med_name_2 = JSON.parse(localStorage.getItem("med2"));
+		med_time_2 = parseFloat(med_name_2.split(" ", 1));
+	}
+	else 
+	{
+		med_time_2 = 0;
+		med_name_2 = '0 ---'
+	}
+
+	if (localStorage.getItem("med3"))
+	{
+		med_name_3 = JSON.parse(localStorage.getItem("med3"));
+		med_time_3 = parseFloat(med_name_3.split(" ", 1));
+	}
+	else 
+	{
+		med_time_3 = 0;
+		med_name_3 = '0 ---'
+	}
+
+
+	// hard times:
+
+	if (localStorage.getItem("hard1"))
+	{
+		hard_name_1 = JSON.parse(localStorage.getItem("hard1"));
+		hard_time_1 = parseFloat(hard_name_1.split(" ", 1));
+	}
+	else 
+	{
+		hard_time_1 = 0;
+		hard_name_1 = '0 ---'
+	}
+	
+	if (localStorage.getItem("hard2"))
+	{
+		hard_name_2 = JSON.parse(localStorage.getItem("hard2"));
+		hard_time_2 = parseFloat(hard_name_2.split(" ", 1));
+	}
+	else 
+	{
+		hard_time_2 = 0;
+		hard_name_2 = '0 ---'
+	}
+
+	if (localStorage.getItem("hard3"))
+	{
+		hard_name_3 = JSON.parse(localStorage.getItem("hard3"));
+		hard_time_3 = parseFloat(hard_name_3.split(" ", 1));
+	}
+	else 
+	{
+		hard_time_3 = 0;
+		hard_name_3 = '0 ---'
+	}
+}
+
+function enterScore()
+{
+	var name = input.value(); 
+	var time = nf(endTime);
+
+	var score = time.concat(" ");
+	score = score.concat(name);
+
+	if (rows == 8 && cols == 8) // easy
+	{	
+		if (endTime < easy_time_3 && endTime >= easy_time_2 || (easy_time_2 != 0 && easy_time_3 == 0 && endTime >= easy_time_2))
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("easy1", JSON.stringify(easy_name_1));
+			localStorage.setItem("easy2", JSON.stringify(easy_name_2));
+			localStorage.setItem("easy3", JSON.stringify(score));
+		}
+		else if ((endTime < easy_time_2 && endTime >= easy_time_1) || (easy_time_1 != 0 && easy_time_3 == 0 && endTime >= easy_time_1))
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("easy1", JSON.stringify(easy_name_1));
+			localStorage.setItem("easy2", JSON.stringify(score));
+			localStorage.setItem("easy3", JSON.stringify(easy_name_2));	
+		}
+		else if (endTime < easy_time_1 || easy_time_1 == 0)
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("easy1", JSON.stringify(score));
+			localStorage.setItem("easy2", JSON.stringify(easy_name_1));
+			localStorage.setItem("easy3", JSON.stringify(easy_name_2));
+		}	
+	}
+	else if (rows == 12 && cols == 12) // medium
+	{
+		if (endTime < med_time_3 && endTime >= med_time_2 || (med_time_2 != 0 && med_time_3 == 0 && endTime >= med_time_2))
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("med1", JSON.stringify(med_name_1));
+			localStorage.setItem("med2", JSON.stringify(med_name_2));
+			localStorage.setItem("med3", JSON.stringify(score));
+		}
+		else if ((endTime < med_time_2 && endTime >= med_time_1) || (med_time_1 != 0 && med_time_3 == 0 && endTime >= med_time_1))
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("med1", JSON.stringify(med_name_1));
+			localStorage.setItem("med2", JSON.stringify(score));
+			localStorage.setItem("med3", JSON.stringify(med_name_2));	
+		}
+		else if (endTime < med_time_1 || med_time_1 == 0)
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("med1", JSON.stringify(score));
+			localStorage.setItem("med2", JSON.stringify(med_name_1));
+			localStorage.setItem("med3", JSON.stringify(med_name_2));
+		}
+	}
+	else if (rows == 16 && cols == 16) // hard
+	{
+		if (endTime < hard_time_3 && endTime >= hard_time_2 || (hard_time_2 != 0 && hard_time_3 == 0 && endTime >= hard_time_2))
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("hard1", JSON.stringify(hard_name_1));
+			localStorage.setItem("hard2", JSON.stringify(hard_name_2));
+			localStorage.setItem("hard3", JSON.stringify(score));
+		}
+		else if ((endTime < hard_time_2 && endTime >= hard_time_1) || (hard_time_1 != 0 && hard_time_3 == 0 && endTime >= hard_time_1))
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("hard1", JSON.stringify(hard_name_1));
+			localStorage.setItem("hard2", JSON.stringify(score));
+			localStorage.setItem("hard3", JSON.stringify(hard_name_2));	
+		}
+		else if (endTime < hard_time_1 || hard_time_1 == 0)
+		{
+			//localStorage.clear();
+
+			localStorage.setItem("hard1", JSON.stringify(score));
+			localStorage.setItem("hard2", JSON.stringify(hard_name_1));
+			localStorage.setItem("hard3", JSON.stringify(hard_name_2));
+		}
+	}
+
+
+
+	input.hide();
+	input_button.hide();
+	input.value(''); // clear value
+}
+
 function preload()
 {
+	loadTimes();
 	font = loadFont('Minesweeper/heavy_data.ttf');
 }
 
@@ -105,6 +333,8 @@ function hardGame()
 	reset();
 }
 
+
+
 function setup()
 {
 	textFont(font);
@@ -134,6 +364,17 @@ function setup()
 	hard_button.position(238, 20);
 	hard_button.mousePressed(hardGame);
 	hard_button.hide();
+
+	input = createInput();
+	input.parent('gameBox');
+	input.position(110, 20);
+	input.hide();
+
+	input_button = createButton('Enter');
+	input_button.parent('gameBox');
+	input_button.position(280, 20);
+	input_button.mousePressed(enterScore);
+	input_button.hide();
 
 	easyGame();
 }	
@@ -196,6 +437,9 @@ function checkForWin()
 		var end = new Date();
 		endTime = (end.getTime() - timer.getTime()) / 1000;
 		hasStarted = false;
+
+		input_button.show();
+		input.show();
 		}
 
 		return true;
