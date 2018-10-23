@@ -6,18 +6,18 @@ function reset()
 {
 	loadTimes();
 	
-	// console.log("reset:");
-	// console.log(easy_name_1);
-	// console.log(easy_name_2);
-	// console.log(easy_name_3);
+	console.log("reset:");
+	console.log(easy_name_1);
+	console.log(easy_name_2);
+	console.log(easy_name_3);
 
-	// console.log(med_name_1);
-	// console.log(med_name_2);
-	// console.log(med_name_3);
+	console.log(med_name_1);
+	console.log(med_name_2);
+	console.log(med_name_3);
 
-	// console.log(hard_name_1);
-	// console.log(hard_name_2);
-	// console.log(hard_name_3);
+	console.log(hard_name_1);
+	console.log(hard_name_2);
+	console.log(hard_name_3);
 
 	menu_open = false;
 	easy_button.hide();
