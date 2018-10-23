@@ -1,23 +1,24 @@
-var mycanvas, input, input_button, menu_open, cols, rows, tile_px, grid, totalBees, new_button, easy_button, med_button, hard_button, size_slider, winTime, isWin, isLose, font, hasStarted, timer, fontSize = 30;
+var mycanvas, input, input_button, menu_open, cols, rows, tile_px, grid, totalBees, new_button, easy_button, med_button, hard_button, size_slider, winTime, isWin, isLose, data_font, c_font,  hasStarted, timer;
 var easy_name_1, easy_name_2, easy_name_3, med_name_1, med_name_2, med_name_3, hard_name_1, hard_name_2, hard_name_3;
 var easy_time_1, easy_time_2, easy_time_3, med_time_1, med_time_2, med_time_3, hard_time_1, hard_time_2, hard_time_3;
+tile_px = 40;
 
 function reset()
 {
 	loadTimes();
-	
-	console.log("reset:");
-	console.log(easy_name_1);
-	console.log(easy_name_2);
-	console.log(easy_name_3);
 
-	console.log(med_name_1);
-	console.log(med_name_2);
-	console.log(med_name_3);
+	// console.log("reset:");
+	// console.log(easy_name_1);
+	// console.log(easy_name_2);
+	// console.log(easy_name_3);
 
-	console.log(hard_name_1);
-	console.log(hard_name_2);
-	console.log(hard_name_3);
+	// console.log(med_name_1);
+	// console.log(med_name_2);
+	// console.log(med_name_3);
+
+	// console.log(hard_name_1);
+	// console.log(hard_name_2);
+	// console.log(hard_name_3);
 
 	menu_open = false;
 	easy_button.hide();
@@ -26,11 +27,10 @@ function reset()
 	isWin = false;
 	isLose = false;
 	hasStarted = false;
-	tile_px = 40;
 	totalBees = Math.floor(cols*rows*0.125);
 
 	// create a canvas the size of the game board
-	mycanvas = createCanvas(cols*tile_px+20, rows*tile_px+100);
+	mycanvas = createCanvas(cols*tile_px+250, rows*tile_px+100);
 	mycanvas.parent('gameBox');
 
 	// create 2D array
@@ -288,7 +288,8 @@ function enterScore()
 function preload()
 {
 	loadTimes();
-	font = loadFont('Minesweeper/heavy_data.ttf');
+	data_font = loadFont('Minesweeper/heavy_data.ttf');
+	c_font = loadFont('Minesweeper/courier.ttf');
 }
 
 function newGame()
@@ -313,7 +314,6 @@ function easyGame()
 {
 	rows = 8;
 	cols = 8;
-
 	reset();
 }
 
@@ -321,15 +321,13 @@ function medGame()
 {
 	rows = 12;
 	cols = 12;
-
 	reset();
 }
 
 function hardGame()
 {
-	rows = 16;
-	cols = 16;
-
+	rows = 15;
+	cols = 15;
 	reset();
 }
 
@@ -337,8 +335,8 @@ function hardGame()
 
 function setup()
 {
-	textFont(font);
-	textSize(fontSize);
+	textFont(data_font);
+	textSize(30);
 	textAlign(CENTER, CENTER);
 	menu_open = false;
 
@@ -510,6 +508,32 @@ function draw()
 			grid[i][j].show();
 		}
 	}
+
+	textFont(c_font);
+	textSize(20);
+	strokeWeight(0.5);
+	textAlign(LEFT);
+	fill(0);
+	text('Best Times!', rows*tile_px + 70, 25);
+
+	text('Easy:', rows*tile_px + 30, 60);
+	text("1) " + easy_name_1, rows*tile_px + 35, 90);
+	text("2) " + easy_name_2, rows*tile_px + 35, 110);
+	text("3) " + easy_name_3, rows*tile_px + 35, 130);
+
+	text('Medium:', rows*tile_px + 30, 170);
+	text("1) " + med_name_1, rows*tile_px + 35, 200);
+	text("2) " + med_name_2, rows*tile_px + 35, 220);
+	text("3) " + med_name_3, rows*tile_px + 35, 240);
+
+	text('Hard:', rows*tile_px + 30, 280);
+	text("1) " + hard_name_1, rows*tile_px + 35, 310);
+	text("2) " + hard_name_2, rows*tile_px + 35, 330);
+	text("3) " + hard_name_3, rows*tile_px + 35, 350);
+
+	textFont(data_font);
+	strokeWeight(1);
+	textSize(30);
 
 	if (isWin)
 	{
