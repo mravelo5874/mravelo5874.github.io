@@ -30,7 +30,7 @@ function reset()
 	totalBees = Math.floor(cols*rows*0.125);
 
 	// create a canvas the size of the game board
-	mycanvas = createCanvas(cols*tile_px+250, rows*tile_px+100);
+	mycanvas = createCanvas(cols*tile_px+275, rows*tile_px+100);
 	mycanvas.parent('gameBox');
 
 	// create 2D array
@@ -250,7 +250,7 @@ function enterScore()
 			localStorage.setItem("med3", JSON.stringify(med_name_2));
 		}
 	}
-	else if (rows == 16 && cols == 16) // hard
+	else if (rows == 15 && cols == 15) // hard
 	{
 		if (endTime < hard_time_3 && endTime >= hard_time_2 || (hard_time_2 != 0 && hard_time_3 == 0 && endTime >= hard_time_2))
 		{
