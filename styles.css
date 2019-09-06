@@ -1,0 +1,244 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  max-width:2000px;
+  max-height:800px;
+  width:auto;
+  height:auto;
+}
+
+div.middle {
+  display: table;
+  position: absolute;
+  width: 1000px;
+  height: 300px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -500px;
+}
+.middle p{
+  color: #424949;
+  text-align: left;
+  padding: 3px 3px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.middle h2{
+  color: black;
+  text-align: left;
+  padding: 3px 3px;
+  text-decoration: none;
+  font-size: 64px;
+  font-family: "Lucida Console", Monaco, monospace
+}
+  
+.middle img {
+  vertical-align: middle;
+  display: table-cell;
+  max-width: 250px;
+  max-height:100%;
+
+}
+.middle span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #999999;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Lucida Console", Monaco, monospace
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #999999;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.home {
+  background-color: #424949;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #999999;
+  color: white;
+}
+
+.container { 
+  height: 5px;
+  position: relative;
+  /*border: 3px solid green;*/
+}
+
+.center_in_box {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center_in_box a {
+  text-align: center;
+  color: #999999;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.center_in_box a:hover {
+  background-color: #424949;
+  color: white;
+}
+
+.about_title {
+  max-width: 150px;
+  width: 150px;
+  color: #999999;
+  font-size: 30px;
+}
+.about_info {
+  font-size: 24px;
+}
+
+.resume {
+  pointer-events: none;
+  display: table;
+  position: absolute;
+  width: 1100px;
+  height: 1500px;
+  left: 50%;
+  margin:-150px 0 0 -550px;
+}
+.resume_container a {
+  padding: 12px 20px;
+  background-color: white;
+  color: #33adff;
+}
+.resume_container a:hover {
+  background-color: #33adff;
+  color: white;
+}
+.resume_container {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+  /*border: solid blue 2px;*/
+  padding-top: 48px;
+}
+.resume_link {
+  display: inline-block;
+}
+
+.box
+{
+  margin: auto;
+  overflow: auto;
+}
+
+.container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 256px;
+  padding-right: 256px;
+}
+
+div.summer_container {
+  /* border: 3px solid blue; */
+  padding: 8px;
+  display:grid;
+  grid-template-columns: 475px 500px;
+  grid-row: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+}
+
+div.summer_box {
+  /*border: 3px solid green;*/
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+div.summer_content {
+  /*border: 3px solid red;*/
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+
+  border-radius: 8px;
+  border: 5px solid #f2f2f2;
+  background-color: #e6e6e6;
+
+  width: 475px;
+  height: 475px;
+}
+
+.summer_content img {
+    display: block;
+    margin: 0 auto;
+    width: 448px;
+    height: 285px;
+    align-self: center;
+
+    border: 5px solid #f2f2f2;
+}
+
+.summer_content h3{
+  font-size: 24px;
+}
+
+.portfolio_style {
+  border-radius: 8px;
+  border: 5px solid #f2f2f2;
+  background-color: #e6e6e6;
+  padding: 16px;
+
+  display: inline-block;
+}
+
+.portfolio_style img {
+  display: block;
+  margin: 0 auto;
+  align-self: center;
+  border: 5px solid #f2f2f2;
+
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.portfolio_style p {
+  font-size: 16px;
+  justify-content: center;
+  text-align: justify;
+}
