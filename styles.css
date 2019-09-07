@@ -8,51 +8,16 @@ body, html {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 200px;
   width: 50%;
 
   max-width:2000px;
-  max-height:800px;
+  max-height:1000px;
   width:auto;
   height:auto;
-}
 
-div.middle {
-  display: table;
-  position: absolute;
-  width: 1000px;
-  height: 300px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0 0 -500px;
-}
-.middle p{
-  color: #424949;
-  text-align: left;
-  padding: 3px 3px;
-  text-decoration: none;
-  font-size: 24px;
-  font-family: "Lucida Console", Monaco, monospace
-}
-.middle h2{
-  color: black;
-  text-align: left;
-  padding: 3px 3px;
-  text-decoration: none;
-  font-size: 64px;
-  font-family: "Lucida Console", Monaco, monospace
-}
-  
-.middle img {
-  vertical-align: middle;
-  display: table-cell;
-  max-width: 250px;
-  max-height:100%;
+  border: solid #595959 16px;
 
-}
-.middle span {
-  vertical-align: middle;
-  display: table-cell;
 }
 
 /* Add a black background color to the top navigation */
@@ -61,62 +26,161 @@ div.middle {
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Add a color to the active/current link */
+.home {
   float: left;
-  color: #999999;
+  color: #4d4d4d;
+  background-color: white;
   text-align: center;
   padding: 24px 32px;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.home:hover {
+  color: white;
+  background-color: #4d4d4d;
+}
+.home_activated {
+  float: left;
+  color: white;
+  background-color: #4d4d4d;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
   font-family: "Lucida Console", Monaco, monospace
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #999999;
+.about_tab {
+  float: left;
+  color: #ffa64d;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.about_tab:hover {
+  background-color: #ffa64d;
   color: white;
+}
+.about_tab_activated {
+  float: left;
+  color: white;
+  background-color: #ffa64d;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.resume_tab {
+  float: left;
+  color: #80ccff;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.resume_tab:hover {
+  background-color: #80ccff;
+  color: white;
+}
+.resume_tab_activated {
+  float: left;
+  color: white;
+  background-color: #80ccff;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.portfolio_tab {
+  float: left;
+  color: #8cff66;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.portfolio_tab:hover {
+  background-color: #8cff66;
+  color: white;
+}
+.portfolio_tab_activated {
+  float: left;
+  color: white;
+  background-color: #8cff66;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.service_tab {
+  float: left;
+  color: #ff6666;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
+}
+.service_tab:hover {
+  background-color: #ff6666;
+  color: white;
+}
+.service_tab_activated {
+  float: left;
+  color: white;
+  background-color: #ff6666;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: "Lucida Console", Monaco, monospace
 }
 
-/* Add a color to the active/current link */
-.topnav a.home {
-  background-color: #424949;
-  color: white;
-}
 
-.topnav a.active {
-  background-color: #999999;
-  color: white;
-}
+
 
 .container { 
   height: 5px;
   position: relative;
   /*border: 3px solid green;*/
+
+  height: 100px;
 }
 
 .center_in_box {
   margin: 0;
-  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
+  /*border: 3px solid blue;*/
 }
 
 .center_in_box a {
   text-align: center;
-  color: #999999;
+  color: white;
   text-align: center;
   padding: 12px 20px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 28px;
   font-family: "Lucida Console", Monaco, monospace;
 }
 
 .center_in_box a:hover {
-  background-color: #424949;
-  color: white;
+  background-color: #595959;
+  color: #262626;
 }
 
 .about_title {
@@ -136,16 +200,17 @@ div.middle {
   width: 1100px;
   height: 1500px;
   left: 50%;
-  margin:-150px 0 0 -550px;
+  margin: 45px 0 150px -550px;
+  border: solid #99d6ff 16px;
 }
 .resume_container a {
   padding: 12px 20px;
-  background-color: white;
-  color: #33adff;
+  background-color: #80ccff;
+  color: white;
 }
 .resume_container a:hover {
-  background-color: #33adff;
-  color: white;
+  background-color: white;
+  color: #80ccff;
 }
 .resume_container {
   text-align: center;
@@ -165,21 +230,21 @@ div.middle {
   overflow: auto;
 }
 
-.container {
+.portfolio_large_container {
   padding-top: 64px;
   padding-bottom: 64px;
-  padding-left: 256px;
-  padding-right: 256px;
+  padding-left: 18%;
+  padding-right: 18%;
 }
 
 div.summer_container {
-  /* border: 3px solid blue; */
-  padding: 8px;
+  /*border: 3px solid blue;*/
+  padding-left: 60px;
   display:grid;
-  grid-template-columns: 475px 500px;
+  grid-template-columns: 390px 585px;
   grid-row: auto auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 5px;
+  grid-column-gap:16px;
+  grid-row-gap: 0px;
 }
 
 div.summer_box {
@@ -195,50 +260,122 @@ div.summer_content {
   padding-left: 16px;
   padding-bottom: 12px;
 
-  border-radius: 8px;
-  border: 5px solid #f2f2f2;
-  background-color: #e6e6e6;
+  background-color: #d9ffcc;
 
   width: 475px;
   height: 475px;
 }
 
 .summer_content img {
-    display: block;
-    margin: 0 auto;
-    width: 448px;
-    height: 285px;
-    align-self: center;
+  display: block;
+  margin: 0 auto;
+  width: 448px;
+  height: 285px;
+  align-self: center;
+  border: 5px solid #b3ff99;
 
-    border: 5px solid #f2f2f2;
+  /*border: 5px solid #f2f2f2;*/
 }
 
-.summer_content h3{
-  font-size: 24px;
+.portfolio_container{
+  /*border: 3px solid blue;*/
+  padding: 8px;
+  display: grid;
+  grid-row: auto auto;
+  grid-template-columns: 930px 100px;
+}
+.portfolio_box{
+  /*border: 3px solid green;*/
+  align-items:center;
 }
 
 .portfolio_style {
-  border-radius: 8px;
-  border: 5px solid #f2f2f2;
-  background-color: #e6e6e6;
+  border-radius: 4px;
+  border: 16px solid #b3ff99;
+  background-color: #d9ffcc;
   padding: 16px;
 
   display: inline-block;
+  max-width: 110%;
+  min-width: 100%;
 }
 
 .portfolio_style img {
   display: block;
   margin: 0 auto;
   align-self: center;
-  border: 5px solid #f2f2f2;
+  border: 5px solid #b3ff99;
 
   margin-left: 16px;
   margin-right: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .portfolio_style p {
-  font-size: 16px;
+  font-size: 17px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   justify-content: center;
   text-align: justify;
+}
+
+.portfolio_style h3 {
+  font-size: 22px;
+  font-family: "Lucida Console", Monaco, monospace;
+  justify-content: center;
+  text-align: justify;
+}
+
+div.about_container {
+  /*border: solid blue 3px;*/
+
+  position: relative;
+  height: 750px;
+}
+div.about_box {
+  /*border: solid green 3px;*/
+
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.about_content {
+  /*border: solid red 3px;*/
+
+  width: 900px;
+  height: 530px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+
+  border-radius: 4px;
+  border: 16px solid #ffb366;
+  background-color: #ffbf80;
+}
+
+.about_content img {
+  border: 5px solid #ffd9b3;
+
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+
+  width: 228px;
+  height: 520px;
+}
+
+.about_content p{
+  font-size: 19px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  justify-content: center;
+  text-align: justify;
+}
+
+.about_content h3{
+  font-size: 52px;
+  font-family: "Lucida Console", Monaco, monospace;
 }
