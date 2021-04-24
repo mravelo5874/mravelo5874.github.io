@@ -1,48 +1,66 @@
-<!DOCTYPE html>	
-<!-- Used to test:    http-server -a localhost -p 8000 -c-1 -->
-<html>	
-	<head>	
-		<link rel="stylesheet" href="styles.css">
-		<title>Marco Ravelo - about</title>
-
-		<div class="topnav">
-  			<a class="home" href="index.html">Marco Ravelo</a>
-  			<a class="about_tab_activated" href="about.html">About</a>
-  			<a class="resume_tab" href="resume.html">Resume</a>
-  			<a class="portfolio_tab" href="portfolio.html">Portfolio</a>
-  			<a class="service_tab" href="service.html">Service</a>
-  			<a class="home" href="etc.html">Back End</a>
-		</div>
-	</head>
-
-	<body bgcolor="#ffa64d">
-		<div class="about_container">
-			<div class="about_box">
-				<div class="about_content">
-					<img class="about_img" src="images/marco.JPG" alt="marco.jpg" style="float:left" />
-					<h3><b>About me:</b></h3>
-					<p><b style="font-size: 17px">Name:</b> Marco Ravelo</p>
-					<p><b style="font-size: 17px">Ocupation:</b> CS Student at Texas A&M</p>
-					<p><b style="font-size: 17px">Bio:</b> I am currently an undergraduate student at Texas A&M University studying Computer Science with minors in Mathematics and Art. </p>
-					<p><b style="font-size: 17px">Interests:</b> Some of my interests within the CS field include application / game development, computer graphics, computer-human interaction, and artificial intelligence. During my free time I also enjoy programming, creating games, designing art, and playing music among other things.</p>
-					<p></p>
-				</div>
-			</div>
-		</div>
-
-<!--
-		<div class="container">
-			<div class="portfolio_style">
-				<img class="about_img" src="images/marco.jpg" alt="marco.jpg" style="float:left" />
-				<div class="about_words">
-					<h3>About me:</h3>
-					<p>Name: Marco Ravelo</p>
-					<p>Ocupation: CS Student</p>
-					<p>Bio: I am currently an undergraduate student at Texas A&M studying Computer Science with minors in Mathematics and Art. I enjoy programming, creating games, designing art, and playing music among other things. Some of my interests within the CS field include application/game development, computer graphics, computer-human interaction, and artificial intelligence.</p>
-					<p></p>
-				</div>
-			</div>
-		</div>
--->
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco's Website</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap');
+    </style>
+</head>
+    
+<body>
+    <div class="main">
+        <div class="header">
+            
+        </div>
+        
+        <div class="grid_layout">
+            <!-- ROW 1 -->
+            <div class="pre_marco"><div class="bottom_right"><p>all about</p></div></div>
+            <div class="marco_home"><div class="bottom_right"><a class="green_link" href="index.html"><h1>Marco</h1></a></div></div>
+            <div class="post_marco"><div class="bottom_left"><p></p></div></div>
+            
+            <!-- ROW 2 -->
+            <div class="under_pre_marco">
+            </div>
+            
+            <div class="nav">
+                <div class="nav_element"><a class="red_link" href="about.html"><h2>about</h2></a></div>
+                <div class="nav_element"><a class="blue_link" href="portfolio.html"><h2>portfolio</h2></a></div>
+                <div class="nav_element"><a class="orange_link" href="resume.html"><h2>resume</h2></a></div>
+                <div class="nav_element"><a class="purple_link" href="more.html"><h2>more</h2></a></div>
+            </div>
+            
+            <div class="main_content">
+<!--                <img id="about_img" src="images/marco.JPG" alt="marco.jpg">-->
+                <div id="about_txt">
+                    <p>Hey there! My name is Marco Ravelo. I've just graduated from Texas A&amp;M with a BS in computer science and two minors in mathematics and art. Not surprisingly, I have an admiration for all things science and art. In my free time, I enjoy reading, playing games, discovering new music, and working on various programming projects.</p>
+                </div>
+            </div>
+            
+            <!-- LEFT COLUMN -->
+            <div class="left_column">
+                <div id="interest_title"><h2>Areas of Interest</h2></div>
+                <div id="interest_content">
+                    <p>Game Development</p>
+                    <p>Sound Design</p>
+                    <p>UI/UX Design</p>
+                    <p>Music Production</p>
+                    <p>Compiler Design</p>
+                </div>
+                <div id="hobbies_title"><h2>Hobbies + for fun</h2></div>
+                <div id="hobbies_content">
+                    <a class="green_link" target="_blank" href="https://open.spotify.com/user/marco.a.polo?si=f07053dbe39e4495"><p>creating playlists</p></a>
+                    <a class="orange_link" target="_blank" href="https://soundcloud.com/marco_smilieface"><p>making music</p></a>
+                    <a class="blue_link" target="_blank" href="https://steamcommunity.com/profiles/76561198040905482/"><p>playing games</p></a>
+                    <a class="red_link" target="_blank" href="https://likewise.com/profile/marco_ravelo"><p>human history</p></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
 </html>

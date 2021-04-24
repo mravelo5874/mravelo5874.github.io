@@ -1,30 +1,59 @@
-<!DOCTYPE html>	
-<!-- Used to test:    http-server -a localhost -p 8000 -c-1 -->
-<html>	
-	<head>	
-		<link rel="stylesheet" href="styles.css">
-		<title>Marco Ravelo</title>
-
-		<div class="topnav">
-  			<a class="home_activated" href="index.html">Marco Ravelo</a>
-  			<a class="about_tab" href="about.html">About</a>
-  			<a class="resume_tab" href="resume.html">Resume</a>
-  			<a class="portfolio_tab" href="portfolio.html">Portfolio</a>
-  			<a class="service_tab" href="service.html">Service</a>
-  			<a class="home" href="etc.html">Back End</a>
-		</div>
-	</head>
-
-	<body bgcolor="#4d4d4d">
-		
-		<img src="images/code_name.gif" alt="code_name.gif" class="center">
-		 	<div class="container">
- 				 <div class="center_in_box">
- 				 	<a href="https://github.com/mravelo5874" target="_blank">GitHub</a>
-					<a href="https://www.linkedin.com/in/tamuMarcoARavelo" target="_blank">LinkedIn</a>			
-					<a href="https://marcor.itch.io/" target="_blank">Itch.io</a>
-					<a href="https://piazza.com/" target="_blank">Piazza</a>
-  				</div>
-			</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco's Website</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap');
+    </style>
+</head>
+    
+<body>
+    <div class="main" id="particles-js">
+        <div class="header">
+            
+        </div>
+        
+        <div class="grid_layout">
+            <!-- ROW 1 -->
+            <div class="pre_marco"><div class="bottom_right"><p>welcome to</p></div></div>
+            <div class="marco_home"><div class="bottom_right"><a class="green_link" href="index.html"><h1>Marco</h1></a></div></div>
+            <div class="post_marco"><div class="bottom_left"><p>'s website</p></div></div>
+            
+            <!-- ROW 2 -->
+            <div class="under_pre_marco">
+            </div>
+            
+            <div class="nav">
+                <div class="nav_element"><a class="red_link" href="about.html"><h2>about</h2></a></div>
+                <div class="nav_element"><a class="blue_link" href="portfolio.html"><h2>portfolio</h2></a></div>
+                <div class="nav_element"><a class="orange_link" href="resume.html"><h2>resume</h2></a></div>
+                <div class="nav_element"><a class="purple_link" href="more.html"><h2>more</h2></a></div>
+            </div>
+            
+            <div class="main_content">
+            </div>
+            
+            <!-- LEFT COLUMN -->
+            <div class="left_column">
+                <div id="contact_title"><h2>Contact Me</h2></div>
+                <div id="contact_content">
+                    <p>mravelo5874@gmail.com</p>
+                    <p>210.748.4706</p>
+                </div>
+                <div id="find_me_title"><h2>Find Me</h2></div>
+                <div id="find_me_content">
+                    <a class="blue_link" target="_blank" href="https://www.linkedin.com/in/tamumarcoaravelo/"><p>LinkedIn</p></a>
+                    <a class="blue_link" target="_blank" href="https://github.com/mravelo5874"><p>GitHub</p></a>
+                    <a class="blue_link" target="_blank" href="https://marcor.itch.io/"><p>Itch.io</p></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="particles.js"></script>
+</body>
 </html>

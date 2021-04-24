@@ -1,24 +1,47 @@
-<!DOCTYPE html>	
-<!-- Used to test:    http-server -a localhost -p 8000 -c-1 -->
-<html>	
-	<head>	
-		<link rel="stylesheet" href="styles.css">
-		<title>Marco Ravelo - resume</title>
-
-		<div class="topnav">
-  			<a class="home" href="index.html">Marco Ravelo</a>
-  			<a class="about_tab" href="about.html">About</a>
-  			<a class="resume_tab_activated" href="resume.html">Resume</a>
-  			<a class="portfolio_tab" href="portfolio.html">Portfolio</a>
-  			<a class="service_tab" href="service.html">Service</a>
-  			<a class="home" href="etc.html">Back End</a>
-		</div>
-	</head>
-
-	<body bgcolor="#80ccff">
-		<div class="resume_container">
-			<a href="images/Resume.png" class="resume_link" target="_blank" style="text-decoration: none;">Download Resume</a>
-		</div>
-		<img  class="resume" src="images/Resume.png"  alt="resume.png">
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco's Website</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap');
+    </style>
+</head>
+    
+<body>
+    <div class="main">
+        <div class="header">
+            
+        </div>
+        
+        <div class="grid_layout_no_left_column">
+            <!-- ROW 1 -->
+            <div class="pre_marco"><div class="bottom_right"><p>this is </p></div></div>
+            <div class="marco_home"><div class="bottom_right"><a class="green_link" href="index.html"><h1>Marco</h1></a></div></div>
+            <div class="post_marco"><div class="bottom_left"><p>'s resume</p></div></div>
+            
+            <!-- ROW 2 -->
+            <div class="under_pre_marco">
+            </div>
+            
+            <div class="nav">
+                <div class="nav_element"><a class="red_link" href="about.html"><h2>about</h2></a></div>
+                <div class="nav_element"><a class="blue_link" href="portfolio.html"><h2>portfolio</h2></a></div>
+                <div class="nav_element"><a class="orange_link" href="resume.html"><h2>resume</h2></a></div>
+                <div class="nav_element"><a class="purple_link" href="more.html"><h2>more</h2></a></div>
+            </div>
+            
+            <div class="main_content">
+                <div style="padding-left: 24px">
+                    <a id="resume_link" target="_blank" href="images/resume_OLD.png"><p>Download Resume</p></a>
+                </div>
+                <img id="resume_img" src="images/resume_OLD.png">
+            </div>
+        </div>
+        
+    </div>
+</body>
 </html>
