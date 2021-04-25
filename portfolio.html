@@ -10,8 +10,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap');
     </style>
 </head>
-    
+
+<div id="particles-js"></div>
 <body>
+    <svg id="fader"></svg>
     <div class="main">
         <div class="header">
             
@@ -20,8 +22,13 @@
         <div class="grid_layout_no_left_column">
             <!-- ROW 1 -->
             <div class="pre_marco"><div class="bottom_right"><p>this is </p></div></div>
-            <div class="marco_home"><div class="bottom_right"><a class="green_link" href="index.html"><h1>Marco</h1></a></div></div>
-            <div class="post_marco"><div class="bottom_left"><p>'s portfolio</p></div></div>
+            
+            <div class="marco_home">
+                <div class="bottom_right">
+                    <a class="green_link" href="index.html" style="float: left;"><h1 >Marco</h1></a>
+                    <p class="post_marco">'s website</p>
+                </div>
+            </div>
             
             <!-- ROW 2 -->
             <div class="under_pre_marco">
@@ -40,7 +47,7 @@
                     <p id="project_date">May 2020</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">Patient Zero was made in the two weeks allotted by jam's rules. I designed and developed the game completely on my own and ended up winning first place overall, alongside best in sound, designm abd programming.</p>
+                            <p id="project_text">Patient Zero was made during a two week period. I designed and developed the game completely on my own and ended up winning first place overall, alongside best in sound, design and programming.</p>
                             <a id="project_link" target="_blank" href="https://marcor.itch.io/patient-zero"><h2>itch.io link</h2></a>
                         </div>
                         <div>
@@ -55,7 +62,7 @@
                     <p id="project_date">Fall 2019</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">ChainOfCmd was my third submission for the semester-wide TAGD Game Jam. The theme this semester was "Chain Reaction", so I decided to create a game that takes input from Twitch Chat. I created all the art assets, music, code, and design for the game. I ended up placing right outside the top three in fourth place.</p>
+                            <p id="project_text">ChainOfCmd was my third submission for the TAGD semester-wide Game Jam. The theme this semester was "Chain Reaction", so I decided to create a game that chains inputs from Twitch Chat together to control a single player. I designed all the art assets, music, and code for the game. I ended up placing right outside the top three in fourth place.</p>
                             <a id="project_link" target="_blank" href="https://marcor.itch.io/chainofcmd"><h2>itch.io link</h2></a>
                         </div>
                         <div>
@@ -85,7 +92,7 @@
                     <p id="project_date">September 2019</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">This semester I decided to attend my first UT game jam were you get assigned a team and a team mentor. During this project, I assited with sound design, music creation, and unity development. Our team ended up getting the "Best Designed Game" award. You can check out our game by visiting the itch.io page below.</p>
+                            <p id="project_text">This semester I decided to attend my first UT game jam were you get assigned a team and a team mentor. During this project, I worked on the sound design, music creation, and unity development. Our team ended up getting the "Best Designed Game" award. You can check out our game by visiting the itch.io page below.</p>
                             <a id="project_link" target="_blank" href="https://marcor.itch.io/the-goo-game"><h2>itch.io link</h2></a>
                         </div>
                         <div>
@@ -100,7 +107,7 @@
                     <p id="project_date">Summer 2019</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">I used <a href="https://catlikecoding.com/unity/tutorials/hex-map/" target="_blank"> <i>this online tutorial</i></a> made by <a href="https://catlikecoding.com/" target="_blank"> <i>Catlike Coding</i></a> to create a hex-based map creation tool. I was planning on creating a full game with this and will most likely do so in the future.</p>
+                            <p id="project_text">I used <a href="https://catlikecoding.com/unity/tutorials/hex-map/" target="_blank"> <i>this online tutorial</i></a> made by <a href="https://catlikecoding.com/" target="_blank"> <i>Catlike Coding</i></a> to create a hex-based map creation tool. This tutorial centers around creating and rendering polygons inside of unity.</p>
                             <a id="project_link" target="_blank" href="https://github.com/mravelo5874/PerlinNoiseTerrainGenerator"><h2>Github Repo</h2></a>
                         </div>
                         <div>
@@ -115,7 +122,7 @@
                     <p id="project_date">Summer 2019</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">Working off an <a href="https://www.youtube.com/watch?v=wbpMiKiSKm8&list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3" target="_blank"> <i>online tutorial</i></a>, I programmed a terrain generator that uses perlin noise to create a 3D terrain mesh using various input values.</p>
+                            <p id="project_text">Working off an <a href="https://www.youtube.com/watch?v=wbpMiKiSKm8&list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3" target="_blank"> <i>online tutorial</i></a> made by <a href="https://www.youtube.com/channel/UCmtyQOKKmrMVaKuRXz02jbQ" target="_blank"><i>Sebastian Lague</i></a>, I created a terrain generator that uses perlin noise to render a 3D terrain mesh using various input values.</p>
                             <a id="project_link" target="_blank" href="https://github.com/mravelo5874/PerlinNoiseTerrainGenerator"><h2>Github Repo</h2></a>
                         </div>
                         <div>
@@ -130,7 +137,7 @@
                     <p id="project_date">Spring 2019</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">Ascension: Escape The Well was created for TAGD's second semester-wide game jam. The theme for this semester was "Stuck Together", so I designed a game where you and your friends are 'stuck together' in a well and must escape to win. I was inspired by many of the games that I was playing at the time. These include: <a style="font-size:1em;" href="http://www.towerfall-game.com/" target="_blank"><i>TowerFall</i></a> for its fast-paced multiplayer gameplay and its simplistic combat system. <a style="font-size:1em;" href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Melee" target="_blank"><i>SSB Melee</i></a> for its technical movement and its fast-paced gameplay aswell. And <a style="font-size:1em;" href="http://nidhogggame.com/" target="_blank"><i>Nidhogg</i></a> for its minimalistic yet dynamic artstyle.</p>
+                            <p id="project_text">'Ascension: Escape The Well' was created for TAGD's second semester-wide game jam. The theme for this semester was "Stuck Together". I was inspired by many of the games that I was playing at the time. These include: <a style="font-size:1em;" href="http://www.towerfall-game.com/" target="_blank"><i>TowerFall</i></a> for its fast-paced multiplayer gameplay and its simplistic combat system. <a style="font-size:1em;" href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Melee" target="_blank"><i>SSB Melee</i></a> for its technical movement and its fast-paced gameplay aswell. And <a style="font-size:1em;" href="http://nidhogggame.com/" target="_blank"><i>Nidhogg</i></a> for its minimalistic and dynamic artstyle. This game ended up winning first place.</p>
                             <a id="project_link" target="_blank" href="https://marcor.itch.io/ascension"><h2>itch.io link</h2></a>
                         </div>
                         <div>
@@ -145,7 +152,7 @@
                     <p id="project_date">Decenber 2018</p>
                     <div id="project_wrapper">
                         <div>
-                            <p id="project_text">This is the first demo of a project in which I create a digital card game heavily inspired by Mega Crit's game: <a style="font-size:1em;" href="https://www.megacrit.com/" target="_blank"><i>Slay the Spire</i></a>. I will continue to work and update the game throughout the Spring semester.</p>
+                            <p id="project_text">This is a demo of a project in which I create a digital card game heavily inspired by Mega Crit's game: <a style="font-size:1em;" href="https://www.megacrit.com/" target="_blank"><i>Slay the Spire</i></a>. The game features four classes and a variety of cards. </p>
                             <a id="project_link" target="_blank" href="https://github.com/mravelo5874/Elemental"><h2>Github Repo</h2></a>
                         </div>
                         <div>
@@ -182,7 +189,9 @@
         </div>
             
     </div>
-    
+    <script src="scripts/fader.js"></script>
     <script src="scripts/portfolio.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>

@@ -10,18 +10,25 @@
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap');
     </style>
 </head>
-    
+
+<div id="particles-js"></div>
 <body>
+    <svg id="fader"></svg>
     <div class="main">
         <div class="header">
             
         </div>
         
-        <div class="grid_layout">
+        <div class="grid_layout_no_left_column">
             <!-- ROW 1 -->
             <div class="pre_marco"><div class="bottom_right"><p>more </p></div></div>
-            <div class="marco_home"><div class="bottom_right"><a class="green_link" href="index.html"><h1>Marco</h1></a></div></div>
-            <div class="post_marco"><div class="bottom_left"><p>!</p></div></div>
+            
+            <div class="marco_home">
+                <div class="bottom_right">
+                    <a class="green_link" href="index.html" style="float: left;"><h1 >Marco</h1></a>
+                    <p class="post_marco">'s website</p>
+                </div>
+            </div>
             
             <!-- ROW 2 -->
             <div class="under_pre_marco">
@@ -35,14 +42,25 @@
             </div>
             
             <div class="main_content">
-            </div>
-            
-            <!-- LEFT COLUMN -->
-            <div class="left_column">
-                
+                <div id="more_content">
+                    <div class="more_row">
+                        <img src="images/particles.gif">
+                        <p>I used <a target="_blank" href="https://vincentgarreau.com/particles.js/">particle.js</a> to animate the background of this website. Adding the effect was easy and makes a big impact on the appearance of your site.</p>
+                    </div>
+                    <div class="more_row">
+                        <img src="images/github-pages.png">
+                        <p>This site is hosted on <a target="_blank" href="https://pages.github.com/">github pages</a>. It's free and easy to set up!</p>
+                    </div>
+                    <div class="more_row">
+                        <img src="images/website.png">
+                        <p>This website was last updated April 2021.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
+    <script src="scripts/fader.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
