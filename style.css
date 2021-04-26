@@ -59,7 +59,7 @@
 
 
 div {
-/*    border: 1px solid var(--darker-blue);*/
+    border: 1px solid var(--darker-blue);
 }
 
 html {
@@ -571,6 +571,7 @@ p {
 
         line-height: 0;
         font-size: 4vw;
+        height: 6vw;
 
         grid-row-start: 1;
         grid-row-end: 1;
@@ -714,7 +715,7 @@ p {
     /* PORTFOLIO PAGE */
 
     #project_title {
-        padding-top: 20vw;
+        padding-top: 10vw;
         text-align: left;
         font-size: 8vw;
         width: 80vw;
