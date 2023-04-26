@@ -85,7 +85,7 @@ void main()
         my_color.rgb += (1.0 - my_color.a) * val_color.a * val_color.rgb;
         my_color.a += (1.0 - my_color.a) * val_color.a;
 
-        if (my_color.a >= 0.8)
+        if (my_color.a >= 0.95)
         {
             break;
         }
