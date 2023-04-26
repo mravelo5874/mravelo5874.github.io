@@ -1,66 +1,54 @@
+<!-- Licensed under a BSD license. See license.html for license -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>marcoravelo.com</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-    
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap');
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title addtitletodoc="false">ConvolutiAutomata</title>
+<style>
+  body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+  }
+  canvas {
+    display: block;  /* prevents scrollbar */
+    width: 100vw;
+    height: 100vh;
+  }
+  #overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: monospace;
+    padding: 1em;
+  }
+</style>
 </head>
 
-<div id="particles-js"></div>
 <body>
-    <svg id="fader"></svg>
-    <div class="main">
-        <div class="header"></div>
+<canvas id="canvas"></canvas>
 
-        <div class="grid_layout">
-            <!-- ROW 1 -->
-            <div class="pre_marco"><div class="bottom_right"><p>welcome to</p></div></div>
-            
-            <div class="marco_home">
-                <div class="bottom_right">
-                    <a class="green_link" style="float: left;"><h1 >Marco</h1></a>
-                    <p class="post_marco">'s website</p>
-                </div>
-            </div>
-            
+<div id="overlay" style="right:10px;bottom:10px">
+  <div style="font-size:16px">automata: <span id="auto" style="color:rgb(0, 255, 0)"></span></div>
+  <div style="font-size:16px">shade: <span id="shade" style="color:rgb(255, 208, 0)"></span></div>
+  <div style="font-size:16px">mode: <span id="mode" style="color:rgb(255, 136, 0)"></span></div>
+  <div style="font-size:16px">res: <span id="res" style="color:rgb(0, 183, 255)"></span></div>
+  <div style="font-size:16px">fps: <span id="fps" style="color:rgb(255, 0, 234)"></span></div>
+</div>
 
-            <!-- ROW 2 -->
-            <div class="under_pre_marco">
-            </div>
+<div id="overlay" style="left:10px;bottom:10px;text-align:left;">
+  <div style="font-size:16px;color:rgb(161, 120, 255);">[controls]</div>
+  <div style="font-size:16px"><span style="color:rgb(0, 255, 0)">left ctrl:</span> change automata</div>
+  <div style="font-size:16px"><span style="color:rgb(255, 208, 0)">left shift:</span> change shade</div>
+  <div style="font-size:16px"><span style="color:rgb(255, 136, 0)">space:</span> swap 2D/3D </div>
+  <div style="font-size:16px"><span style="color:rgb(0, 183, 255)">mouse:</span> interact</div>
+  <div style="font-size:16px"><span style="color:rgb(108, 130, 255)">arrows:</span> stuff</div>
+  <div style="font-size:16px"><span style="color:rgb(255, 0, 234)">p:</span> stop/start</div>
+  <div style="font-size:16px"><span style="color:rgb(255, 0, 106)">r:</span> reset</div>
+  <div style="font-size:16px"><span style="color:rgb(255, 177, 177)">m:</span> randomize!</div>
+</div>
 
-            <div class="nav">
-                <div class="nav_element"><a class="red_link" href="about.html"><h2>about</h2></a></div>
-                <div class="nav_element"><a class="blue_link" href="portfolio.html"><h2>portfolio</h2></a></div>
-                <div class="nav_element"><a class="orange_link" href="resume.html"><h2>resume</h2></a></div>
-                <div class="nav_element"><a class="purple_link" href="more.html"><h2>more</h2></a></div>
-            </div>
-
-            <div class="main_content">
-            </div>
-
-            <!-- LEFT COLUMN -->
-            <div class="left_column">
-                <div id="contact_title"><h2>Contact Me</h2></div>
-                <div id="contact_content">
-                    <p>mravelo5874@gmail.com</p>
-                    <p>210.748.4706</p>
-                </div>
-                <div id="find_me_title"><h2>Find Me</h2></div>
-                <div id="find_me_content">
-                    <a class="blue_link" target="_blank" href="https://github.com/mravelo5874"><p>GitHub</p></a>
-                    <a class="blue_link" target="_blank" href="https://marcor.itch.io/"><p>Itch.io</p></a>
-                    <a class="blue_link" target="_blank" href="https://www.linkedin.com/in/tamumarcoaravelo/"><p>LinkedIn</p></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="scripts/fader.js"></script>
-    <script src="scripts/particles.js"></script>
-    <script src="scripts/app.js"></script>
+<script>var exports = {};</script>
+<script type="module" src="./index.js"></script>
 </body>
 </html>
