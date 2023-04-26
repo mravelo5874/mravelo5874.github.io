@@ -38,7 +38,7 @@ export class app3D {
     cam_sense = 0.25;
     rot_speed = 0.03;
     zoom_speed = 0.005;
-    min_zoom = 2;
+    min_zoom = 1;
     max_zoom = 12;
     // geometry
     cube;
@@ -259,7 +259,7 @@ export class app3D {
         let gl = this.context;
         if (_reset_cam) {
             // reset camera
-            this.camera = new Camera(new Vec3([0, 0, -this.min_zoom]), new Vec3([0, 0, 0]), new Vec3([0, 1, 0]), 45, this.canvas.width / this.canvas.height, 0.1, 1000.0);
+            this.camera = new Camera(new Vec3([0, 0, -2]), new Vec3([0, 0, 0]), new Vec3([0, 1, 0]), 45, this.canvas.width / this.canvas.height, 0.1, 1000.0);
         }
         // program
         let frag = simple_3d_fragment;
