@@ -173,7 +173,7 @@ export class user_input {
                 case 1:
                     {
                         if (this.neural_app.curr_app == 'app2d') {
-                            this.neural_app.app2d.mouse_draw(x, y, 32);
+                            this.neural_app.app2d.mouse_erase(x, y);
                         }
                         else if (this.neural_app.curr_app == 'app3d') {
                             // move camera if in 3d mode
@@ -195,7 +195,7 @@ export class user_input {
                 case 2:
                     {
                         if (this.neural_app.curr_app == 'app2d') {
-                            this.neural_app.app2d.mouse_erase(x, y);
+                            this.neural_app.app2d.mouse_draw(x, y);
                         }
                         else if (this.neural_app.curr_app == 'app3d') {
                             this.neural_app.app3d.camera_zoom(dy);
@@ -235,7 +235,7 @@ export class user_input {
                 case 1:
                     {
                         if (this.neural_app.curr_app == 'app2d') {
-                            this.neural_app.app2d.mouse_draw(x, y, 32);
+                            this.neural_app.app2d.mouse_draw(x, y);
                         }
                         else if (this.neural_app.curr_app == 'app3d') {
                             // move camera if in 3d mode

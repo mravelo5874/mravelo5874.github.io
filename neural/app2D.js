@@ -368,7 +368,7 @@ export class app2D {
             this.brush_0[i] = 0;
         }
     }
-    mouse_draw(rel_x, rel_y, brush_size) {
+    mouse_draw(rel_x, rel_y) {
         let gl = this.context;
         let w = this.canvas.width;
         let h = this.canvas.height;
