@@ -1,18 +1,24 @@
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    /* stars.gif from -> https://it.pinterest.com/pin/607563805965076926/ */
+    background-image: url('../assets/stars.gif');
+    background-repeat: repeat;
 }
 
 h1 {
     margin: 0;
 }
 
+p {
+    margin:  0;
+    padding: 0;
+}
+
 .background-div {
     height: 100%;
     width: 100%;
-    /* stars.gif from -> https://it.pinterest.com/pin/607563805965076926/ */
-    background-image: url('../assets/stars.gif');
-    background-repeat: repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +41,7 @@ h1 {
     /* sunsetbeach.gif from -> https://www.pinterest.com/pin/49328558413047920/ */
     /* aquarium.gif from -> https://www.pinterest.com/pin/85849936642853030/ */
     background-image: url('../assets/aquarium.gif');
+    border: 2px solid white;
     overflow: hidden;
 }
 
@@ -47,24 +54,33 @@ h1 {
 .info-div {
     height: 200px;
     width: 100%;
-    background-color: greenyellow;
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
 }
 
 .email-div {
     height: 200px;
-    background-color: blueviolet;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .education-div {
     height: 200px;
-    background-color: blue;
+    display: block;
+    background-color: blueviolet;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .github-div {
     height: 200px;
-    background-color: darkseagreen;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .proj-div {
