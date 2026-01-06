@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.background-div {
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.content-div {
+    height: 100vh;
+    width: 780px;
+    background-color: darkblue;
+}
+
+.title-top-div {
+    height: 50px;
+    width: 100%;
+    background-color: chocolate;
+}
+
+.title-banner-div {
+    height: 150px;
+    width: 100%;
+    background-color: brown;
+}
+
+.title-bottom-div {
+    height: 50px;
+    width: 100%;
+    background-color: chocolate;
+    text-align: right;
+}
+
+.info-div {
+    height: 200px;
+    width: 100%;
+    background-color: greenyellow;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+}
+
+.email-div {
+    height: 200px;
+    background-color: blueviolet;
+}
+
+.education-div {
+    height: 200px;
+    background-color: blue;
+}
+
+.github-div {
+    height: 200px;
+    background-color: darkseagreen;
+}
+
+.proj-div {
+    height: 200px;
+    width: 100%;
+    background-color: greenyellow;
+}
