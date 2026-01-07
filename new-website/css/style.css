@@ -38,6 +38,7 @@ p {
 .title-banner-div {
     height: 200px;
     width: 100%;
+    object-fit: cover;
     /* sunsetbeach.gif from -> https://www.pinterest.com/pin/49328558413047920/ */
     /* aquarium.gif from -> https://www.pinterest.com/pin/85849936642853030/ */
     background-image: url('../assets/aquarium.gif');
@@ -85,20 +86,39 @@ p {
 .proj-div {
     height: 200px;
     width: 100%;
-    background-color: greenyellow;
     display: flex;
 }
 
 .proj-img {
     height: 200px;
     width: 300px;
-    background-color: bisque;
 }
 
 .proj-info {
     height: 200px;
     width: 100%;
-    background-color: magenta;
+}
+
+.proj-title {
+    color: white;
+    text-shadow: 1px 1px rgb(0, 0, 0)
+}
+
+.proj-paragraph {
+    color: white;
+    text-shadow: 1px 1px rgb(0, 0, 0)
+}
+
+.proj-i {
+    color: cyan;
+}
+
+.proj-a {
+    color: fuchsia;
+}
+
+.proj-a:visited {
+    color: rgb(205, 8, 205)
 }
 
 .footer-div {
