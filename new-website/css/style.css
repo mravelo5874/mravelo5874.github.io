@@ -21,13 +21,36 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center top;
     color: black;
 }
 
+.bg-gifs-div {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    /* background-color: rgba(0, 255, 255, 0.267); */
+}
+
+.bg-space {
+    width: 100%;
+    /* background-color: rgba(255, 0, 212, 0.281); */
+}
+
+.bg-gif {
+    display: block;
+    /* background-color: rgba(251, 255, 0, 0.137); */
+}
+
 .content-div {
-    height: 100vh;
+    height: 100%;
     width: 780px;
+    position: relative;
+    top: 0;
+    /* background-color: rgba(0, 255, 0, 0.267); */
 }
 
 .title-top-div {
@@ -39,6 +62,7 @@ p {
     height: 200px;
     width: 100%;
     object-fit: cover;
+    background-size: 100% 100%;
     /* sunsetbeach.gif from -> https://www.pinterest.com/pin/49328558413047920/ */
     /* aquarium.gif from -> https://www.pinterest.com/pin/85849936642853030/ */
     background-image: url('../assets/aquarium.gif');
